@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "appointments",
+  "info": {
+    "singularName": "appointment",
+    "pluralName": "appointments",
+    "displayName": "Appointment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "UserName": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Date": {
+      "type": "string"
+    },
+    "Time": {
+      "type": "string"
+    },
+    "clinics": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::clinic.clinic",
+      "inversedBy": "appointments"
+    },
+    "Note": {
+      "type": "text"
+    },
+    "Status": {
+      "type": "string",
+      "default": "On Going"
+    },
+    "medical_record": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::medical-record.medical-record",
+      "mappedBy": "appointment"
+    }
+  }
+}

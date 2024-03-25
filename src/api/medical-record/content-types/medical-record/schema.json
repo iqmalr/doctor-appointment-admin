@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "medical_records",
+  "info": {
+    "singularName": "medical-record",
+    "pluralName": "medical-records",
+    "displayName": "MedicalRecord",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "MedicalRecordId": {
+      "type": "string"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "DateOfBirth": {
+      "type": "string"
+    },
+    "Address": {
+      "type": "string"
+    },
+    "AdmissionDiagnosis": {
+      "type": "string"
+    },
+    "PhysicalExamination": {
+      "type": "string"
+    },
+    "TreatmentHistory": {
+      "type": "string"
+    },
+    "PrimaryDiagnosis": {
+      "type": "string"
+    },
+    "SecondaryDiagnosis": {
+      "type": "string"
+    },
+    "ComplicationDiagnosis": {
+      "type": "string"
+    },
+    "ProcedureName": {
+      "type": "string"
+    },
+    "AnesthesiaType": {
+      "type": "string"
+    },
+    "DischargeCondition": {
+      "type": "string"
+    },
+    "DischargeMethod": {
+      "type": "string"
+    },
+    "DischargeStatus": {
+      "type": "string"
+    },
+    "FollowUpPlan": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "appointment": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::appointment.appointment",
+      "inversedBy": "medical_record"
+    }
+  }
+}
